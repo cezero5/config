@@ -1,0 +1,18 @@
+return {
+  "max397574/startup.nvim",
+  config = function()
+    require("startup").setup({
+      -- Aquí puedes añadir la configuración que desees
+      -- Te recomiendo revisar la documentación del plugin para más configuraciones
+      theme = "evil", -- o puedes elegir otro tema
+      header = "Welcome to Neovim", -- Personaliza el encabezado
+      footer = "Ready to start!", -- Personaliza el pie de página
+      buttons = {
+        { "e", "New File", "<cmd>enew<CR>" },
+        { "f", "Find File", "<cmd>Telescope find_files<CR>" },
+        { "r", "Recent Files", "<cmd>Telescope oldfiles<CR>" },
+        { "p", "Git Projects", "<cmd>Telescope projects<CR>" },
+      },
+    })
+  end
+}
